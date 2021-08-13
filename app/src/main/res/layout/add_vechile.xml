@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary">
+
+
+    <TextView
+        android:id="@+id/forgotPassword2"
+        android:layout_width="match_parent"
+        android:layout_height="61dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:gravity="center_horizontal"
+        android:text="Add Vehicle"
+        android:textAlignment="center"
+        android:textColor="#130404"
+        android:textColorLink="#FFFFFF"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="363dp"
+        android:layout_height="51dp"
+
+        android:layout_marginBottom="8dp"
+        android:paddingLeft="5dp"
+        android:paddingTop="10dp"
+        android:text="Service Type"
+        android:textColor="@color/colorAccent"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/AutoCompleteTextView"
+        app:layout_constraintEnd_toEndOf="@+id/forgotPassword2"
+        app:layout_constraintHorizontal_bias="0.25"
+        app:layout_constraintStart_toStartOf="@+id/forgotPassword2"
+        tools:ignore="MissingConstraints" />
+
+    <AutoCompleteTextView
+        android:id="@+id/AutoCompleteTextView"
+
+        android:layout_width="371dp"
+        android:layout_height="51dp"
+        android:text="Brand( auto Suggestions)"
+        android:textColor="@color/colorAccent"
+        app:layout_constraintEnd_toEndOf="@+id/textView7"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textView7"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="181dp" />
+
+    <AutoCompleteTextView
+        android:id="@+id/textView10"
+        android:layout_width="372dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="10dp"
+        android:text="Model(Auto Suggestion)"
+        android:textColor="@color/colorAccent"
+        app:layout_constraintEnd_toEndOf="@+id/AutoCompleteTextView"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/AutoCompleteTextView"
+        app:layout_constraintTop_toBottomOf="@+id/AutoCompleteTextView" />
+
+    <AutoCompleteTextView
+        android:id="@+id/textView12"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="10dp"
+        android:text="Manufacturer (Auto Suggestion)"
+        android:textColor="@color/colorAccent"
+        app:layout_constraintEnd_toEndOf="@+id/textView10"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textView10"
+        app:layout_constraintTop_toBottomOf="@+id/textView10" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="10dp"
+        android:paddingLeft="5dp"
+        android:paddingTop="10dp"
+        android:text="Number Plate"
+        android:textColor="@color/colorAccent"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/textView12"
+        app:layout_constraintStart_toStartOf="@+id/textView12"
+        app:layout_constraintTop_toBottomOf="@+id/textView12" />
+
+    <AutoCompleteTextView
+        android:id="@+id/textView14"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="10dp"
+        android:paddingTop="9dp"
+        android:text="Color"
+        android:textColor="@color/colorAccent"
+        app:layout_constraintEnd_toEndOf="@+id/textView13"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textView13"
+        app:layout_constraintTop_toBottomOf="@+id/textView13" />
+
+    <Button
+        android:id="@+id/button6"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:background="@drawable/button_bg"
+        android:text="REGISTER"
+        android:textColor="#040303"
+        android:textColorHint="#1B1919"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:backgroundTint="@color/purple_700"
+        app:layout_constraintEnd_toEndOf="@+id/textView14"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textView14"
+        app:layout_constraintTop_toBottomOf="@+id/textView14" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

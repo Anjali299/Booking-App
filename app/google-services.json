@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "645192677946",
+    "project_id": "redcan-5e340",
+    "storage_bucket": "redcan-5e340.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:645192677946:android:30038bfec5045028af9303",
+        "android_client_info": {
+          "package_name": "com.neeraj.redcan"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "645192677946-grsp5euj4gtteddjs9ioasekdqit474v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDYOBP1Ra65DdMRdI3j-LFwI4_gX78dqqw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "645192677946-grsp5euj4gtteddjs9ioasekdqit474v.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
