@@ -159,46 +159,42 @@ import static java.util.concurrent.TimeUnit.SECONDS;
          AlertDialog dialog  = builder.create();
          dialog.show();
 
-         btn_continue.setOnClickListener(v -> {
-              if (TextUtils.isEmpty(first_name.getText().toString()))
-              {
-                  Toast.makeText(this,"Please enter first name",Toast.LENGTH_SHORT).show();
-                  return;
-              }
-              else if (TextUtils.isEmpty(last_name.getText().toString()))
-              {
-                  Toast.makeText(this,"Please enter last name",Toast.LENGTH_SHORT).show();
-                  return;
-              }
-              else if (TextUtils.isEmpty(phone.getText().toString()))
-              {
-                  Toast.makeText(this,"Please enter phoneNumber",Toast.LENGTH_SHORT).show();
+         btn_continue.setOnClickListener(new View.OnClickListener() {
+             @Override
+             public void onClick(View v) {
+                 if (TextUtils.isEmpty(first_name.getText().toString())) {
+                     Toast.makeText(splashscreenActivity.this, "Please enter first name", Toast.LENGTH_SHORT).show();
+                     return;
+                 } else if (TextUtils.isEmpty(last_name.getText().toString())) {
+                     Toast.makeText(splashscreenActivity.this, "Please enter last name", Toast.LENGTH_SHORT).show();
+                     return;
+                 } else if (TextUtils.isEmpty(phone.getText().toString())) {
+                     Toast.makeText(splashscreenActivity.this, "Please enter phoneNumber", Toast.LENGTH_SHORT).show();
 
-                  return;
-              }
-              else
-              {
-                  DriverInfoModel model = new DriverInfoModel();
-                  model.setFirstName(first_name.getText().toString());
-                  model.setLastName(last_name.getText().toString());
-                  model.setPhoneNum(phone.getText().toString());
-                  model.setRating(0.0);
+                     return;
+                 } else {
+                     DriverInfoModel model = new DriverInfoModel();
+                     model.setFirstName(first_name.getText().toString());
+                     model.setLastName(last_name.getText().toString());
+                     model.setPhoneNum(phone.getText().toString());
+                     model.setRating(0.0);
 
-                  driverInfoRef.child(FirebaseAuth.getInstance().getCurrentUser().getUid())
-                          .setValue(model)
-                          .addOnFailureListener(e ->
-                                  {
-                                      dialog.dismiss();
-                                      Toast.makeText(splashscreenActivity.this, e.getMessage(), Toast.LENGTH_SHORT).show();
-                                  }
-                                   )
-                          .addOnSuccessListener(unused -> {
-                               Toast.makeText(this,"Register Sucessfully",Toast.LENGTH_SHORT).show();
+                     driverInfoRef.child(FirebaseAuth.getInstance().getCurrentUser().getUid())
+                             .setValue(model)
+                             .addOnFailureListener(e ->
+                                     {
+                                         dialog.dismiss();
+                                         Toast.makeText(splashscreenActivity.this, e.getMessage(), Toast.LENGTH_SHORT).show();
+                                     }
+                             )
+                             .addOnSuccessListener(unused -> {
+                                 Toast.makeText(splashscreenActivity.this, "Register Sucessfully", Toast.LENGTH_SHORT).show();
 
-                               dialog.dismiss();
-                               goToHomeActivity(model);
-                          });
-              }
+                                 dialog.dismiss();
+                                 splashscreenActivity.this.goToHomeActivity(model);
+                             });
+                 }
+             }
          });
 
      }

@@ -129,19 +129,19 @@ public class HomeFragment extends Fragment implements OnMapReadyCallback {
                 .withListener(new PermissionListener() {
                     @Override
                     public void onPermissionGranted(PermissionGrantedResponse response) {
-//
-//                        mMap.setMyLocationEnabled(true);
-//                        mMap.getUiSettings().setMyLocationButtonEnabled(true);
-//                        mMap.setOnMyLocationButtonClickListener(() -> {
-//
-//                            fusedLocationProviderClient.getLastLocation()
-//                                    .addOnFailureListener(e -> Toast.makeText(getContext(), "" + e.getMessage(), Toast.LENGTH_SHORT).show())
-//                                    .addOnSuccessListener(location -> {
-//                                        LatLng userLatlng = new LatLng(location.getLatitude(), location.getLongitude());
-//                                        mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(userLatlng, 18f));
-//                                    });
-//                          return true;
-//                      });
+
+                        mMap.setMyLocationEnabled(true);
+                        mMap.getUiSettings().setMyLocationButtonEnabled(true);
+                        mMap.setOnMyLocationButtonClickListener(() -> {
+
+                            fusedLocationProviderClient.getLastLocation()
+                                    .addOnFailureListener(e -> Toast.makeText(getContext(), "" + e.getMessage(), Toast.LENGTH_SHORT).show())
+                                    .addOnSuccessListener(location -> {
+                                        LatLng userLatlng = new LatLng(location.getLatitude(), location.getLongitude());
+                                        mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(userLatlng, 18f));
+                                    });
+                          return true;
+                      });
 
                       //set Layout button
                         View locationButton = ((View)mapFragment.getView().findViewById(Integer.parseInt("1"))

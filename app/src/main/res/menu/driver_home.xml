@@ -1,9 +1,78 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
-    <item
-        android:id="@+id/action_settings"
-        android:orderInCategory="100"
-        android:title="@string/action_settings"
-        app:showAsAction="never" />
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/home_menu"
+            android:title="@string/home"
+            android:icon="@drawable/home"/>
+
+        <item
+            android:id="@+id/nav_discover"
+            android:title="@string/discover"
+            android:icon="@drawable/search"/>
+
+        <item
+            android:id="@+id/nav_chats"
+            android:title="@string/chats"
+            android:icon="@drawable/chat"/>
+
+        <item
+            android:id="@+id/nav_payments"
+            android:title="@string/payments"
+            android:icon="@drawable/payment"/>
+
+        <item
+            android:id="@+id/nav_trips"
+            android:title="@string/trips"
+            android:icon="@drawable/map"/>
+
+        <item
+            android:id="@+id/nav_settings"
+            android:title="@string/settings"
+            android:icon="@drawable/setting"/>
+
+        <item
+            android:id="@+id/nav_support"
+            android:title="@string/support"
+            android:icon="@drawable/support"/>
+
+
+    </group>
+
+    <group
+        android:checkableBehavior="single">
+
+        <item
+            android:title="Help">
+
+            <menu>
+
+                <item
+                    android:id="@+id/privacy_policy_menu"
+                    android:title="Privacy Policy"/>
+
+                <item
+                    android:id="@+id/about_us_menu"
+                    android:title="About Us"/>
+                <item
+                    android:id="@+id/contact_us_menu"
+                    android:title="Contact Us"/>
+                <item
+                    android:id="@+id/terms_condi_menu"
+                    android:title="Terms and Conditions"/>
+
+
+
+
+            </menu>
+
+
+
+        </item>
+
+
+    </group>
+
 </menu>

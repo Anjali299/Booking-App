@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -17,7 +18,7 @@
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
         android:gravity="center_horizontal"
-        android:text="Add Vehicle"
+        android:text="@string/add_vehicle"
         android:textAlignment="center"
         android:textColor="#130404"
         android:textColorLink="#FFFFFF"
@@ -30,32 +31,33 @@
 
     <TextView
         android:id="@+id/textView7"
-        android:layout_width="363dp"
-        android:layout_height="51dp"
+        android:layout_width="371dp"
+        android:layout_height="50dp"
 
         android:layout_marginBottom="8dp"
         android:paddingLeft="5dp"
         android:paddingTop="10dp"
-        android:text="Service Type"
+        android:text="@string/service_type"
         android:textColor="@color/colorAccent"
         android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@+id/AutoCompleteTextView"
         app:layout_constraintEnd_toEndOf="@+id/forgotPassword2"
         app:layout_constraintHorizontal_bias="0.25"
         app:layout_constraintStart_toStartOf="@+id/forgotPassword2"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints,RtlSymmetry"
+        android:paddingStart="5dp" />
 
     <AutoCompleteTextView
         android:id="@+id/AutoCompleteTextView"
 
         android:layout_width="371dp"
         android:layout_height="51dp"
-        android:text="Brand( auto Suggestions)"
+        android:text="@string/brand_auto_suggestions"
         android:textColor="@color/colorAccent"
         app:layout_constraintEnd_toEndOf="@+id/textView7"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/textView7"
-        tools:ignore="MissingConstraints"
+        tools:ignore="LabelFor,MissingConstraints"
         tools:layout_editor_absoluteY="181dp" />
 
     <AutoCompleteTextView
@@ -68,7 +70,8 @@
         app:layout_constraintEnd_toEndOf="@+id/AutoCompleteTextView"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/AutoCompleteTextView"
-        app:layout_constraintTop_toBottomOf="@+id/AutoCompleteTextView" />
+        app:layout_constraintTop_toBottomOf="@+id/AutoCompleteTextView"
+        tools:ignore="LabelFor" />
 
     <AutoCompleteTextView
         android:id="@+id/textView12"
